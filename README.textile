@@ -1,0 +1,64 @@
+h1.  AcadHelper Loader
+
+This C# solution builds a dll that allows AutoCAD to load and process commands
+that are written in Ruby.
+
+It is based on extending the work started by Kean Walmsley of Autodesk in his April 2, 2009 "blog post":http://through-the-interface.typepad.com/through_the_interface/2009/04/using-ironruby-inside-autocad.html
+
+The project uses "IronRuby ":http://www.ironruby.net/ and would not be possible without either IronRuby or Kean's initial work
+
+My thanks to everyone.
+
+<hr />
+
+h2. This project (along with "acadhelper":http://github.com/davidbl/acadhelper) supercedes the "old IronRuby-Autocad-Helper":http://github.com/davidbl/IronRuby-Autocad-Helper
+
+But there are still some "wiki pages":http://wiki.github.com/davidbl/IronRuby-Autocad-Helper that might be of interest
+
+<hr />
+
+The dll created by this project adds several commands to AutoCAD
+
+# RBADD - select and load a Ruby file using a dialog box and register the Ruby methods found as AutoCAD commands
+# -RBADD - select and load a Ruby file from the command line and register the Ruby methods found as AutoCAD commands
+# RBSPEC - select and load a Ruby file using a dialog box and run the Rspec tests in that file
+# RB_REPL - creates an IRB clone on the AutoCAD commandline
+
+In order to create the dll,  you will need to clone the solution, edit the settings 'RubyAcadSettings' with your 
+correct paths for IronRubyHome and AcadHome,  edit the settings for your desired IronRuby search paths (the defaults
+are the same as those in ir.exe) and edit your AcadRequires.  If you are using AutoCAD version 2009, no editing is needed.
+If you are using version 2010, you will need to remove acmgdinternal.dll from the requires list.
+
+Netload your dll and you are ready to go.
+
+If you have used previous versions of my "acadhelper":http://github.com/davidbl/IronRuby-Autocad-Helper, you should know that it is not longer necessary to set the search paths
+or include the AutoCAD dlls in your .rb files.  The new loader does this automatically.  But, if needed, you can
+still load or change the search paths and AutoCAD requires in either the loader dll or the the .rb files.
+
+h2. Requirements
+
+Although not technically a requirement, I do suggest that you use "acadhelper":http://github.com/davidbl/acadhelper.  It provides
+some nice wrapper and helper methods that bring some Ruby goodness to AutoCAD.
+
+h2. Author
+
+AcadHelper.rb is written by David K. Blackmon
+<hr />
+
+h2. License
+
+Copyright (c) 2009 David K. Blackmon
+All Rights Reserved.
+Released under MIT License
+
+h2. Credits
+
+Kean Walmsley 
+
+IronRuby and the IronRuby Team
+
+Autodesk and AutoCAD are registered trademarks or trademarks of Autodesk, Inc.
+In the USA and/or other countries. All other Brand names, product names, or trademarks
+belong to their respective holders. Autodesk reserves the right to alter product offerings
+and specifications at any time without notice and is not reponsible for typographical or
+graphical errors that may appear in this document.

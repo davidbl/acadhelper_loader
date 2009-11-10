@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RubyAcad" GeneratedClassName="RubyAcadSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IronRubyHome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:/ironruby-0.9.0/</Value>
+    </Setting>
+    <Setting Name="IronRubyPaths" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lib/ironRuby;lib/Ruby/site_ruby/1.8;lib/Ruby/site_ruby;lib/Ruby/1.8;/bin</Value>
+    </Setting>
+    <Setting Name="AcadHome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:/Program Files (x86)/AutoCAD Civil 3D 2009/</Value>
+    </Setting>
+    <Setting Name="AcadRequires" Type="System.String" Scope="User">
+      <Value Profile="(Default)">acmgd.dll;acdbmgd.dll;acmgdinternal.dll</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
