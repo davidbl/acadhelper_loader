@@ -61,6 +61,13 @@ namespace RubyAcad
 
                     engine.SetSearchPaths(search_paths);
 
+                    //read the AutoCAD requires
+                    List<string> acad_requires = CommandsAndFunctions.read_autocad_requires();
+                    foreach (string acad_require in acad_requires)
+                    {
+                        engine.RequireRubyFile(acad_require);
+                    }
+
                     string code = @"require 'rubygems';
                                     $0='c:/ironruby-0.9.0/lib/IronRuby/gems/1.8/bin/spec'
                                     ARGV << '" + file + @"' << '-c' << '-f' << 'nested' ;
